@@ -1,6 +1,6 @@
 {
   "name": "el-input-validate",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "基于 Vue 和 element-ui 的自定义指令，对输入框进行输入限制",
   "author": "Liriye",
   "main": "index.js",

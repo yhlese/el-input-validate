@@ -39,7 +39,7 @@ function formatNum(str, float = 2) {
   let newStr = str.replace(reg, '');
   newStr = float === 0 ? str.slice(0, str.length) : newStr;
   const newStrFlot = arr && arr[1].replace(reg, '');
-  return float !== 0 && i !== -1 ? newStr + '.' + newStrFlot.slice(0, float) : newStr;
+  return float !== '0' && i !== -1 ? newStr + '.' + newStrFlot.slice(0, float) : newStr;
 }
 
 function formatTel(str) {

@@ -16,7 +16,7 @@ ElInputValidate(Vue)
 ### 使用
 
 - 自定义 限制输入框**只能输入数字且保留几位**
-- 参数 0 1 2 （默认保留两位）
+- 参数 0 1 2 3 4 ... （默认保留两位）
 
 ```
  <el-input v-formatNum:0="value" v-model="value" ></el-input>
