@@ -2,13 +2,13 @@
   "name": "el-input-validate",
   "version": "0.1.0",
   "private": true,
+  "author": "yhlese@github",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "serve": "vue-styleguidist serve",
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "element-ui": "^2.11.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
