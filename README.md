@@ -19,21 +19,21 @@ ElInputValidate(Vue)
 - 参数 0 1 2 （默认保留两位）
 
 ```
- <el-input v-model="ruleForm.input" v-formatNum:0="ruleForm.input"></el-input>
- <el-input v-model="ruleForm.input" v-formatNum:1="ruleForm.input"></el-input>
- <el-input v-model="ruleForm.input" v-formatNum:2="ruleForm.input"></el-input>
+ <el-input v-formatNum:0="value" v-model="value" ></el-input>
+ <el-input v-formatNum:1="value" v-model="value"></el-input>
+ <el-input v-formatNum:2="value" v-model="value"></el-input>
 ```
 
 - 自定义 限制输入框 **只能输入数字和短横线**
 - 场景：一般用于电话
 
 ```
- <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
+ <el-input v-formatTel="value" v-model="value" ></el-input>
 ```
 
 - 自定义 限制输入框 **不能输入中文**
 - 场景：一般用于密码
 
 ```
- <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
+ <el-input v-formatNotTxt="value" v-model="value" ></el-input>
 ```
