@@ -1,29 +1,35 @@
-# el-input-validate
+# Vue 和 element-ui 的输入框限制 el-input-validate
 
-## Project setup
-```
-yarn install
-```
+## 安装
 
-### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn add el-input-validate
 ```
 
-### Compiles and minifies for production
+### 使用
+
+- 自定义 限制输入框**只能输入数字** 且 保留几位
+
+#### 参数 0 1 2 （默认保留两位）
+
 ```
-yarn run build
+ <el-input v-model="ruleForm.input" v-formatNum:0="ruleForm.input"></el-input>
+ <el-input v-model="ruleForm.input" v-formatNum:1="ruleForm.input"></el-input>
+ <el-input v-model="ruleForm.input" v-formatNum:2="ruleForm.input"></el-input>
 ```
 
-### Run your tests
+- 自定义 限制输入框 **只能输入数字和短横线** 一般用于电话
+
+#### 参数 0 1 2 （默认保留两位）
+
 ```
-yarn run test
+ <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+- 自定义 限制输入框 **不能输入中文** 一般用于密码
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### 参数 0 1 2 （默认保留两位）
+
+```
+ <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
+```
