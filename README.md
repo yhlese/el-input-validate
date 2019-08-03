@@ -1,7 +1,16 @@
-## Vue 和 element-ui 的输入框限制
+## 基于 Vue 和 element-ui 的自定义指令，对输入框进行输入限制
+
+### 安装
 
 ```
 yarn add el-input-validate
+```
+
+main.js 中引用
+
+```
+import ElInputValidate from 'el-input-validate'
+ElInputValidate(Vue)
 ```
 
 ### 使用
