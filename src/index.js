@@ -1,60 +1,26 @@
-import Vue from 'vue';
-import {
-  formatNum,
-  formatTel,
-  formatNotInputTxt
-} from './format.js';
-var _ = require('lodash');
+import ElAdminTable from "./index.vue";
+// install function executed by Vue.use()
+export function install() {
+  if (install.installed) return;
+  install.installed = true;
+  require("./directive")
+}
 
-/**
- * @description 自定义 限制输入框 只能输入数字 且 限制后几位 
- * @param 0 1 2 （默认保留两位）
- * @example  <el-input v-model="ruleForm.fee" v-formatNum:2="ruleForm.fee"></el-input>
- * 
- */
-Vue.directive('formatNum', {
-  update(el, {
-    value,
-    expression,
-    arg
-  }, {
-    context
-  }) {
-    let keys = expression.split('.');
-    _.set(context, keys, formatNum(value, arg))
-  }
-});
+// Create module definition for Vue.use()
+const plugin = {
+  install
+};
 
-/**
- * @description 自定义 限制输入框 只能输入数字和短横线 
- * @example  <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
- * 
- */
-Vue.directive('formatTel', {
-  update(el, {
-    value,
-    expression
-  }, {
-    context
-  }) {
-    let keys = expression.split('.');
-    _.set(context, keys, formatTel(value))
-  }
-});
+// To auto-install when vue is found
+let GlobalVue = null;
+if (typeof window !== "undefined") {
+  GlobalVue = window.Vue;
+} else if (typeof global !== "undefined") {
+  GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+  GlobalVue.use(plugin);
+}
 
-/**
- * @description 自定义 限制输入框 不能输入中文 
- * @example  <el-input v-model="customQuery.tel" v-formatTel="customQuery.tel"></el-input>
- * 
- */
-Vue.directive('formatNotTxt', {
-  update(el, {
-    value,
-    expression
-  }, {
-    context
-  }) {
-    let keys = expression.split('.');
-    value && _.set(context, keys, formatNotInputTxt(value))
-  }
-})
+// To allow use as module (npm/webpack/etc.) export component
+export default ElAdminTable;
