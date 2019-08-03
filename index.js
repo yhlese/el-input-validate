@@ -1,6 +1,6 @@
-import formatNum from './directive';
-import formatTel from './directive';
-import formatNotTxt from './directive';
+import formatNum from './src/directive';
+import formatTel from './src/directive';
+import formatNotTxt from './src/directive';
 
 function ElInputValidate(Vue) {
   if (!Vue) return;
