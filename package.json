@@ -1,7 +1,6 @@
 {
   "name": "el-input-validate",
   "version": "0.1.0",
-  "private": true,
   "author": "yhlese@github",
   "scripts": {
     "serve": "vue-styleguidist serve"
