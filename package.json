@@ -4,13 +4,23 @@
   "private": true,
   "author": "yhlese@github",
   "scripts": {
-    "serve": "vue-styleguidist serve",
+    "serve": "vue-styleguidist serve"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "element-ui": "^2.11.1",
     "vue": "^2.6.10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhlese/el-input-validate"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "el-input",
+    "input"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-plugin-eslint": "^3.9.0",
