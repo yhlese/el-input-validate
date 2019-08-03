@@ -4,7 +4,9 @@ import {
   formatTel,
   formatNotInputTxt
 } from './format.js';
-var _ = require('lodash');
+var {
+  set
+} = require('lodash');
 
 /**
  * @description 自定义 限制输入框 只能输入数字 且 限制后几位 
@@ -21,7 +23,7 @@ Vue.directive('formatNum', {
     context
   }) {
     let keys = expression.split('.');
-    _.set(context, keys, formatNum(value, arg))
+    set(context, keys, formatNum(value, arg))
   }
 });
 
@@ -38,7 +40,7 @@ Vue.directive('formatTel', {
     context
   }) {
     let keys = expression.split('.');
-    _.set(context, keys, formatTel(value))
+    set(context, keys, formatTel(value))
   }
 });
 
@@ -55,6 +57,6 @@ Vue.directive('formatNotTxt', {
     context
   }) {
     let keys = expression.split('.');
-    value && _.set(context, keys, formatNotInputTxt(value))
+    value && set(context, keys, formatNotInputTxt(value))
   }
 })
