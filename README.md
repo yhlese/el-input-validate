@@ -1,7 +1,5 @@
 ## Vue 和 element-ui 的输入框限制
 
-## 安装
-
 ```
 yarn add el-input-validate
 ```
