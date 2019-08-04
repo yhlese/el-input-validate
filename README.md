@@ -6,14 +6,14 @@
 ### 安装
 
 ```
-yarn add all-input-validate
+yarn add el-input-validate
 ```
 
 main.js 中引用
 
 ```
-import AllInputValidate from 'all-input-validate'
-AllInputValidate(Vue)
+import ElInputValidate from 'el-input-validate'
+ElInputValidate(Vue)
 ```
 
 ### 使用
@@ -22,8 +22,8 @@ AllInputValidate(Vue)
 - 参数 0 1 2 3 4 ... （默认保留两位）
 
 ```
- <input v-formatNum:0="value" v-model="value" ></input>
- <a-input v-formatNum:2="value" v-model="value"></a-input>
+ <input v-formatNum="value" v-model="value" ></input>
+ <a-input v-formatNum:0="value" v-model="value"></a-input>
  <el-input v-formatNum:1="value" v-model="value"></el-input>
  ...
 ```
@@ -33,8 +33,6 @@ AllInputValidate(Vue)
 
 ```
  <input v-formatTel="value" v-model="value" ></input>
- <a-input v-formatTel="value" v-model="value" ></a-input>
- <el-input v-formatTel="value" v-model="value" ></el-input>
 ```
 
 - 自定义 限制输入框 **不能输入中文**
@@ -42,6 +40,4 @@ AllInputValidate(Vue)
 
 ```
  <input v-formatNotTxt="value" v-model="value" ></input>
- <a-input v-formatNotTxt="value" v-model="value" ></a-input>
- <el-input v-formatNotTxt="value" v-model="value" ></el-input>
 ```
