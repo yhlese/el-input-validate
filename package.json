@@ -1,6 +1,6 @@
 {
   "name": "el-input-validate",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "基于 vue input 的自定义指令，对输入框进行输入限制 (适用于各种UI组件：如 Element AntDesign ...）并支持TS",
   "author": "Liriye",
   "main": "index.ts",
